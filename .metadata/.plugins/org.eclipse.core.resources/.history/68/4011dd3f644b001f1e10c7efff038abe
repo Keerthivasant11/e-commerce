@@ -1,0 +1,5 @@
+package com.eleven.ecommerce.product_service.entity;
+
+public class Product {
+
+}

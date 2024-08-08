@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Product {
 
-	@Id
+	@Id //checking git
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Long id;
 	private String name;

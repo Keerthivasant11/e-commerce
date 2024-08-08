@@ -1,0 +1,79 @@
+package com.eleven.ecommerce.product_service.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor  // Ensures the no-arg constructor is generated
+@AllArgsConstructor // For full-args constructor
+@Builder
+public class Product {
+
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long id;
+	private String name;
+	private String description;
+	private Long price;
+	
+	private Product(Builder builder) {
+		this.name = builder.name;
+		this.description = builder.description;
+		this.price = builder.price;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public String getDescription() {
+		return this.description;
+		
+	}
+	
+	public Long getPrice() {            
+		return this.price;
+		
+	}
+	
+	public static class Builder{
+		
+		private Long id;
+		private String name;
+		private String description;
+		private Long price;
+		
+		
+		public Builder setId(Long id) {
+			this.id = id;
+			return this;
+			
+		}
+		public Builder setName(String name) {
+			this.name = name;
+			return this;
+		}
+		
+		public Builder setDescription(String description) {
+			this.description = description;
+			return this;
+			
+		}
+		
+		public Builder setPrice(Long price) {
+			this.price =price;
+			return this;
+		}
+		
+		public Product build() {
+			return new Product(this);
+		}
+	}
+}

@@ -4,8 +4,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+
+@NoArgsConstructor  // Ensures the no-arg constructor is generated
+@AllArgsConstructor // For full-args constructor
+@Builder
 public class Product {
 
 	@Id
@@ -13,7 +21,7 @@ public class Product {
 	private Long id;
 	private String name;
 	private String description;
-	private long price;
+	private Long price;
 	public Long getId() {
 		return id;
 	}
@@ -32,11 +40,12 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public long getPrice() {
+	public Long getPrice() {
 		return price;
 	}
-	public void setPrice(long price) {
+	public void setPrice(Long price) {
 		this.price = price;
 	}
+	
 	
 }

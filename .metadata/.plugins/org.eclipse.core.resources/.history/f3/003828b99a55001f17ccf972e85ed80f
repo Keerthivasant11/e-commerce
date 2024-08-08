@@ -1,0 +1,40 @@
+package com.eleven.ecommerce.product_service.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.eleven.ecommerce.product_service.DTO.ProductDTO;
+import com.eleven.ecommerce.product_service.entity.Product;
+import com.eleven.ecommerce.product_service.repository.ProductRepository;
+
+@Service
+public class ProductService {
+	
+	@Autowired
+	private ProductRepository productRepository;
+	
+	
+	public void createProduct(ProductDTO productDTO) {
+		Product product = new Product.Builder()
+				.setName(productDTO.getName())
+				.setId(productDTO.getId())
+				.setDescription(productDTO.getDescription())
+				.setPrice(productDTO.getPrice())
+				.build();
+		
+		productRepository.save(product);
+		
+	}
+	
+	public Optional<ProductDTO> getProduct(Long id) {
+		Optional<Product> product = productRepository.findById(id);
+		
+		Product p = new Product.Builder()
+				.
+	}
+
+	
+
+}

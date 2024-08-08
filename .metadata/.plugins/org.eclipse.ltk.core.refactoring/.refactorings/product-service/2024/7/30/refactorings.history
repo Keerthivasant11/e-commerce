@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.eleven.ecommerce.product_service.DTO.PoductDTO&apos; to &apos;ProductDTO&apos;&#x0D;&#x0A;- Original project: &apos;product-service&apos;&#x0D;&#x0A;- Original element: &apos;com.eleven.ecommerce.product_service.DTO.PoductDTO&apos;&#x0D;&#x0A;- Renamed element: &apos;com.eleven.ecommerce.product_service.DTO.ProductDTO&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PoductDTO&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.eleven.ecommerce.product_service.DTO{PoductDTO.java[PoductDTO" matchStrategy="1" name="ProductDTO" qualified="false" references="true" similarDeclarations="false" stamp="1722088773200" textual="false" version="1.0"/>
+</session>
